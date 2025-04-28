@@ -52,19 +52,24 @@
 
     <main>
         <section id="search">
-            <div id="search-component" >
+            <div id="search-component">
                 <input 
+                    id="search-input"
                     type="text" 
                     placeholder="Nhập tên sản phẩm để tra cứu..." 
                     style="width: 60%; padding: 0.8rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 5px; outline: none;"
                 >
                 <button 
+                    onclick="searchProduct()"
                     style="padding: 0.8rem 1.5rem; font-size: 1rem; background-color: #ff4d4d; color: white; border: none; border-radius: 5px; cursor: pointer; margin-left: 0.5rem;"
                 >
                     Tìm Kiếm
                 </button>
             </div>
+            <div id="search-results" style="margin-top: 1rem;"></div>
         </section>
+        
+        <script src="assets/js/search.js"></script>
         
         <section id="news">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
