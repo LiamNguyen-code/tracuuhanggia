@@ -1,0 +1,399 @@
+  /* Đảm bảo không có cuộn ngang */
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Ngăn cuộn ngang */
+    font-family: Arial, sans-serif;
+}
+
+/* Đảm bảo tất cả phần tử không vượt quá chiều rộng màn hình */
+* {
+    box-sizing: border-box; /* Bao gồm padding và border trong kích thước phần tử */
+}
+
+header {
+background-color: #ff4d4d;
+color: white;
+padding: 1rem 2rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: fixed; /* Cố định header */
+top: 0; /* Đặt ở trên cùng */
+width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+z-index: 1000; /* Đảm bảo header nằm trên các phần tử khác */
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng đổ bóng */
+}
+
+main {
+padding: 6rem 2rem; /* Thêm khoảng cách để tránh header che nội dung */
+}
+
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+header nav a:hover {
+    background-color: #e60000;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer a {
+    color: #ff4d4d;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #ff4d4d;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ff4d4d;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+#search-component {
+text-align: center;
+margin-top: 6rem; /* Thêm khoảng cách để tránh bị che bởi header */
+}
+
+
+#search-component input {
+    width: 60%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+#search-component button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+#news-component {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.news-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.news-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.news-item h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem;
+}
+
+.news-item h3 a {
+    color: #ff4d4d;
+    text-decoration: none;
+}
+
+.news-item h3 a:hover {
+    text-decoration: underline;
+}
+
+.news-item p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    header nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem 0;
+        background-color: #ff4d4d;
+        color: white;
+        border-bottom: 1px solid #e60000;
+    }
+
+    header nav a:hover {
+        background-color: #e60000;
+    }
+
+    #search-component input {
+        width: 90%; /* Giảm chiều rộng input trên thiết bị nhỏ */
+    }
+
+    #news-component {
+        grid-template-columns: 1fr; /* Hiển thị 1 cột trên màn hình nhỏ */
+    }
+
+    .news-item img {
+        height: 200px; /* Điều chỉnh chiều cao hình ảnh */
+    }
+
+    footer {
+        font-size: 0.9rem; /* Giảm kích thước chữ trong footer */
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 1.2rem; /* Giảm kích thước logo */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Giảm kích thước tiêu đề */
+    }
+
+    #search-component input {
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        font-size: 1.2rem; /* Tăng kích thước chữ */
+        padding: 1rem; /* Tăng khoảng cách bên trong */
+        border-radius: 8px; /* Bo góc mềm mại hơn */
+    }
+
+    #search-component button {
+        font-size: 1.2rem; /* Tăng kích thước chữ */
+        padding: 1rem 1.5rem; /* Tăng khoảng cách bên trong */
+        border-radius: 8px; /* Bo góc mềm mại hơn */
+        margin-top: 0.5rem; /* Thêm khoảng cách giữa input và button */
+        width: 100%; /* Button chiếm toàn bộ chiều rộng */
+    }
+
+    #search-component {
+        display: flex;
+        flex-direction: column; /* Sắp xếp input và button theo cột */
+        align-items: center; /* Căn giữa nội dung */
+        gap: 0.5rem; /* Khoảng cách giữa input và button */
+    }
+
+    body {
+        overflow-x: hidden; /* Ngăn cuộn ngang */
+    }
+}
+
+.tabs {
+display: flex;
+justify-content: center;
+margin-bottom: 1rem;
+gap: 1rem;
+}
+
+.tab-button {
+padding: 0.8rem 1.5rem;
+font-size: 1rem;
+background-color: #ff4d4d;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.tab-button:hover {
+background-color: #e60000;
+}
+
+.tab-button.active {
+background-color: #e60000;
+}
+
+.tab-content {
+text-align: center;
+padding: 1rem;
+border: 1px solid #ccc;
+border-radius: 5px;
+background-color: #fff;
+}
+
+/* Phần "Xem thêm" */
+/* Phần "Xem thêm" */
+.view-more {
+display: flex;
+align-items: center;
+text-decoration: none;
+color: #ff4d4d; /* Màu chữ */
+font-size: 1rem;
+font-weight: bold;
+transition: color 0.3s ease;
+}
+
+.view-more:hover {
+color: #e60000; /* Đổi màu chữ khi hover */
+}
+
+.view-more img {
+width: 14px; /* Giảm kích thước icon */
+height: 14px;
+margin-left: 0.5rem; /* Khoảng cách giữa text và icon */
+filter: invert(29%) sepia(91%) saturate(746%) hue-rotate(336deg) brightness(96%) contrast(91%); /* Đổi màu icon thành đỏ */
+transition: transform 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+.view-more:hover img {
+transform: translateX(5px); /* Dịch chuyển icon khi hover */
+}
+
+/* Thanh menu */
+header {
+background-color: #ff4d4d;
+color: white;
+padding: 1rem 2rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1000;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-toggle {
+display: none;
+flex-direction: column;
+cursor: pointer;
+gap: 0.3rem;
+}
+
+.menu-toggle span {
+display: block;
+width: 25px;
+height: 3px;
+background-color: white;
+border-radius: 5px;
+transition: all 0.3s ease;
+}
+
+    /* Menu bình thường */
+    nav {
+        display: flex;
+        gap: 1rem;
+    }
+
+
+nav a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+padding: 0.5rem 1rem;
+border-radius: 5px;
+}
+
+nav a:hover {
+background-color: #e60000;
+}
+
+ /* Menu thu gọn ở chế độ mobile */
+ @media (max-width: 768px) {
+   /* Menu mặc định bị ẩn */
+nav {
+    display: none; /* Ẩn menu mặc định */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ff4d4d;
+    padding: 1rem 0;
+}
+
+    nav.active {
+        display: flex; /* Hiển thị menu khi nhấn vào nút hamburger */
+    }
+
+    nav a {
+        text-align: center;
+        padding: 1rem;
+        border-bottom: 1px solid #e60000;
+        color: white;
+        text-decoration: none;
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    .menu-toggle {
+        display: flex; /* Hiển thị nút hamburger */
+        flex-direction: column;
+        cursor: pointer;
+        gap: 0.3rem;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+}
+
+/* Ẩn menu bình thường trên mobile */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Ẩn menu mặc định */
+    }
+
+    nav.active {
+        display: flex; /* Hiển thị menu khi có lớp 'active' */
+    }
+}

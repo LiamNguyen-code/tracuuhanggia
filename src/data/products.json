@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Counterfeit Milk",
+        "category": "Dairy",
+        "description": "Counterfeit milk products that do not meet safety standards.",
+        "price": "1.50",
+        "reported_by": "Consumer Reports",
+        "date_reported": "2023-01-15"
+    },
+    {
+        "name": "Fake Medicine X",
+        "category": "Medicine",
+        "description": "Unauthorized imitation of Medicine X, potentially harmful.",
+        "price": "20.00",
+        "reported_by": "Health Authority",
+        "date_reported": "2023-02-10"
+    },
+    {
+        "name": "Imitation Cooking Oil",
+        "category": "Cooking Oil",
+        "description": "Substandard cooking oil sold as premium brand.",
+        "price": "3.00",
+        "reported_by": "Food Safety Agency",
+        "date_reported": "2023-03-05"
+    },
+    {
+        "name": "Counterfeit Seasoning Powder",
+        "category": "Seasoning",
+        "description": "Fake seasoning powder that lacks quality control.",
+        "price": "2.50",
+        "reported_by": "Culinary Experts",
+        "date_reported": "2023-04-20"
+    },
+    {
+        "name": "Fake Candy Brand",
+        "category": "Candy",
+        "description": "Counterfeit candy that may contain harmful ingredients.",
+        "price": "1.00",
+        "reported_by": "Consumer Safety Group",
+        "date_reported": "2023-05-30"
+    }
+]

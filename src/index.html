@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra Cứu Hàng Giả</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+<script>
+    function showTab(tabId) {
+        // Ẩn tất cả nội dung tab
+        const contents = document.querySelectorAll('.tab-content');
+        contents.forEach(content => content.style.display = 'none');
+
+        // Bỏ kích hoạt tất cả nút tab
+        const buttons = document.querySelectorAll('.tab-button');
+        buttons.forEach(button => button.classList.remove('active'));
+
+        // Hiển thị nội dung tab được chọn
+        document.getElementById(tabId).style.display = 'block';
+
+        // Kích hoạt nút tab được chọn
+        event.target.classList.add('active');
+    }
+</script>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('active'); // Thêm hoặc xóa lớp 'active' để hiển thị/ẩn menu
+    }
+</script>
+</head>
+<body>
+    <header>
+        <div class="logo">Tra Cứu Hàng Giả</div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="mobile-menu">
+            <a href="#search">Tìm Kiếm</a>
+            <a href="#news">Tin Tức</a>
+            <a href="#catalog">Danh Mục hàng giả</a>
+            <a href="#fake-brands">Thương hiệu hàng giả</a>
+            <a href="#contact">Liên Hệ</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="search">
+            <div id="search-component" >
+                <input 
+                    type="text" 
+                    placeholder="Nhập tên sản phẩm để tra cứu..." 
+                    style="width: 60%; padding: 0.8rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 5px; outline: none;"
+                >
+                <button 
+                    style="padding: 0.8rem 1.5rem; font-size: 1rem; background-color: #ff4d4d; color: white; border: none; border-radius: 5px; cursor: pointer; margin-left: 0.5rem;"
+                >
+                    Tìm Kiếm
+                </button>
+            </div>
+        </section>
+        
+        <section id="news">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2 style="margin: 0;">Tin Tức Mới Nhất</h2>
+                <a href="news.html" class="view-more">
+                    Xem thêm
+                    <img src="https://cdn-icons-png.flaticon.com/512/271/271228.png" alt="Xem thêm">
+                </a>
+            </div>
+            <div id="news-component" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                <!-- Tin tức 1 -->
+                <div class="news-item" style="border: 1px solid #ccc; border-radius: 5px; overflow: hidden; background: #fff;">
+                    <img src="https://photo-baomoi.bmcdn.me/w700_r1/2025_04_28_23_52096777/63fe67ba2ef4c7aa9ee5.jpg.avif" alt="Tin 1" style="width: 100%; height: 150px; object-fit: cover;">
+                    <div style="padding: 1rem;">
+                        <h3 style="font-size: 1.2rem; margin: 0 0 0.5rem;">
+                            <a href="https://baomoi.com/loi-khai-giam-doc-xuong-san-xuat-71-nghin-lit-dau-an-40-tan-mi-chinh-gia-c52096777.epi" target="_blank" style="color: #ff4d4d; text-decoration: none;">Lời khai giám đốc xưởng sản xuất dầu ăn, mì chính giả</a>
+                        </h3>
+                        <p style="font-size: 0.9rem; color: #555;">71 nghìn lít dầu ăn và 40 tấn mì chính giả đã bị phát hiện. Đây là lời khai của giám đốc xưởng sản xuất.</p>
+                    </div>
+                </div>
+                <!-- Tin tức 2 -->
+                <div class="news-item" style="border: 1px solid #ccc; border-radius: 5px; overflow: hidden; background: #fff;">
+                    <img src="https://photo-baomoi.bmcdn.me/w700_r1/2025_04_28_3_52098220/581826426f0c8652df1d.jpg.avif" alt="Tin 2" style="width: 100%; height: 150px; object-fit: cover;">
+                    <div style="padding: 1rem;">
+                        <h3 style="font-size: 1.2rem; margin: 0 0 0.5rem;">
+                            <a href="https://baomoi.com/sua-gia-thuc-pham-chuc-nang-gia-nham-vao-nguoi-gia-tre-nho-c52098220.epi" target="_blank" style="color: #ff4d4d; text-decoration: none;">Sữa giả, thực phẩm chức năng giả nhắm vào người già, trẻ nhỏ</a>
+                        </h3>
+                        <p style="font-size: 0.9rem; color: #555;">Các sản phẩm giả mạo đang nhắm đến đối tượng dễ bị tổn thương như người già và trẻ nhỏ.</p>
+                    </div>
+                </div>
+                <!-- Tin tức 3 -->
+                <div class="news-item" style="border: 1px solid #ccc; border-radius: 5px; overflow: hidden; background: #fff;">
+                    <img src="https://phunuvietnam.mediacdn.vn/thumb_w/1098/179072216278405120/2025/4/27/f-1745796644606252778478-0-0-998-1597-crop-17457966481402008499796.jpg" alt="Tin 3" style="width: 100%; height: 150px; object-fit: cover;">
+                    <div style="padding: 1rem;">
+                        <h3 style="font-size: 1.2rem; margin: 0 0 0.5rem;">
+                            <a href="https://baodautu.vn/cuc-an-toan-thuc-pham-yeu-cau-thu-hoi-san-pham-mi-chinh-gia-cua-cong-ty-tnhh-famimoto-viet-nam-d274332.html" target="_blank" style="color: #ff4d4d; text-decoration: none;">Tin tức tai nạn giao thông mới nhất hôm nay</a>
+                        </h3>
+                        <p style="font-size: 0.9rem; color: #555;">Cục An toàn thực phẩm (Bộ Y tế) đã có công văn gửi Sở Y tế tỉnh Phú Thọ và Chi cục An toàn vệ sinh thực phẩm tỉnh Phú Thọ.</p>
+                    </div>
+                </div>
+                <!-- Tin tức 4 -->
+                <div class="news-item" style="border: 1px solid #ccc; border-radius: 5px; overflow: hidden; background: #fff;">
+                    <img src="https://photo-baomoi.bmcdn.me/w700_r1/2025_04_28_15_52098172/64808fd8c6962fc87687.jpg.avif" alt="Tin 4" style="width: 100%; height: 150px; object-fit: cover;">
+                    <div style="padding: 1rem;">
+                        <h3 style="font-size: 1.2rem; margin: 0 0 0.5rem;">
+                            <a href="https://baomoi.com/thuc-pham-chuc-nang-sua-gia-tran-lan-quang-binh-kiem-tra-ra-sao-c52098172.epi" target="_blank" style="color: #ff4d4d; text-decoration: none;">Thực phẩm chức năng, sữa giả tràn lan tại Quảng Bình</a>
+                        </h3>
+                        <p style="font-size: 0.9rem; color: #555;">Cơ quan chức năng tại Quảng Bình đang kiểm tra tình trạng thực phẩm chức năng và sữa giả.</p>
+                    </div>
+                </div>
+                <!-- Tin tức 5 -->
+                <div class="news-item" style="border: 1px solid #ccc; border-radius: 5px; overflow: hidden; background: #fff;">
+                    <img src="https://file3.qdnd.vn/data/images/0/2025/04/05/upload_2072/kera.jpg?dpi=150&quality=100&w=870" alt="Tin 5" style="width: 100%; height: 150px; object-fit: cover;">
+                    <div style="padding: 1rem;">
+                        <h3 style="font-size: 1.2rem; margin: 0 0 0.5rem;">
+                            <a href="https://www.qdnd.vn/phap-luat/tin-tuc/keo-rau-cu-kera-la-hang-gia-co-quan-chuc-nang-tim-nguoi-bi-hai-822783" target="_blank" style="color: #ff4d4d; text-decoration: none;">Kẹo rau củ Kera là hàng giả, cơ quan chức năng tìm người bị hại</a>
+                        </h3>
+                        <p style="font-size: 0.9rem; color: #555;">Cơ quan chức năng đang tìm kiếm người bị hại liên quan đến sản phẩm kẹo rau củ Kera giả.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="catalog">
+            <h2>Danh Mục Sản Phẩm Giả</h2>
+            <div id="catalog-component">
+                <div class="tabs">
+                    <button class="tab-button active" onclick="showTab('milk')">Sữa Giả</button>
+                    <button class="tab-button" onclick="showTab('medicine')">Thuốc Giả</button>
+                    <button class="tab-button" onclick="showTab('candy')">Kẹo Giả</button>
+                    <button class="tab-button" onclick="showTab('spices')">Gia Vị</button>
+                </div>
+                <div class="tab-content" id="milk">
+                    <p>Danh sách các sản phẩm sữa giả...</p>
+                </div>
+                <div class="tab-content" id="medicine" style="display: none;">
+                    <p>Danh sách các sản phẩm thuốc giả...</p>
+                </div>
+                <div class="tab-content" id="candy" style="display: none;">
+                    <p>Danh sách các sản phẩm kẹo giả...</p>
+                </div>
+                <div class="tab-content" id="spices" style="display: none;">
+                    <p>Danh sách các sản phẩm gia vị giả (dầu ăn, bột nêm)...</p>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="fake-brands">
+            <h2>Thương Hiệu Giả</h2>
+            <div id="brands-component" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <!-- Thương hiệu 1 -->
+                <div class="brand-item" style="border: 1px solid #ccc; border-radius: 5px; overflow: hidden; background: #fff; text-align: center;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUQ85MPujz9hcR8Zoye7Tm06cEJ8mkNo0eCA&s" alt="Thương hiệu 1" style="width: 100%; height: 150px; object-fit: cover;">
+                    <div style="padding: 1rem;">
+                        <h3 style="font-size: 1.2rem; margin: 0 0 0.5rem;">Thương Hiệu A</h3>
+                        <p style="font-size: 0.9rem; color: #555;">Mô tả ngắn về thương hiệu giả A.</p>
+                    </div>
+                </div>
+                <!-- Thương hiệu 2 -->
+                <div class="brand-item" style="border: 1px solid #ccc; border-radius: 5px; overflow: hidden; background: #fff; text-align: center;">
+                    <img src="https://nld.mediacdn.vn/291774122806476800/2025/4/14/screenshot-2025-04-14-at-224732-1744645693170159229293.png" alt="Thương hiệu 2" style="width: 100%; height: 150px; object-fit: cover;">
+                    <div style="padding: 1rem;">
+                        <h3 style="font-size: 1.2rem; margin: 0 0 0.5rem;">Thương Hiệu B</h3>
+                        <p style="font-size: 0.9rem; color: #555;">Mô tả ngắn về thương hiệu giả B.</p>
+                    </div>
+                </div>
+                <!-- Thương hiệu 3 -->
+                <div class="brand-item" style="border: 1px solid #ccc; border-radius: 5px; overflow: hidden; background: #fff; text-align: center;">
+                    <img src="https://images2.thanhnien.vn/thumb_w/686/528068263637045248/2025/4/27/bot-ngot-174576331381218328715-0-0-1250-2000-crop-1745763320020250204719-452-783-1250-1382-crop-174576465349193078093.jpg" alt="Thương hiệu 3" style="width: 100%; height: 150px; object-fit: cover;">
+                    <div style="padding: 1rem;">
+                        <h3 style="font-size: 1.2rem; margin: 0 0 0.5rem;">Thương Hiệu C</h3>
+                        <p style="font-size: 0.9rem; color: #555;">Mô tả ngắn về thương hiệu giả C.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Liên Hệ</h2>
+            <p>Để được hỗ trợ, vui lòng liên hệ qua email: <a href="mailto:support@example.com">support@example.com</a>.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Tra Cứu Hàng Giả. Bản quyền thuộc về chúng tôi. | <a href="#privacy">Chính Sách Bảo Mật</a></p>
+    </footer>
+</body>
+</html>
